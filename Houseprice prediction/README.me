@@ -1,0 +1,39 @@
+House Prices Prediction Using XGBoost
+This project builds a regression model using XGBoost to predict house prices based on a variety of features. The model is trained on the Kaggle House Prices dataset and outputs predictions in a CSV file.
+
+Dataset
+The dataset used includes features related to house attributes and conditions. The target variable, SalePrice, represents the sale price of the house.
+
+Requirements
+Python 3.x
+Pandas
+Scikit-learn
+XGBoost
+You can install the required packages with:
+
+bash
+Copy code
+pip install pandas scikit-learn xgboost
+
+Code Overview
+Load the Dataset: Reads the training and testing datasets (train.csv and test.csv).
+Data Preprocessing:
+Removes irrelevant columns.
+Encodes categorical variables using one-hot encoding.
+Align Columns: Ensures that the test data has the same columns as the training data for compatibility.
+Train the Model: Uses an XGBoost regressor to train on the training dataset.
+Predict on Test Data: Generates predictions on the test dataset.
+Evaluate the Model: Calculates Mean Squared Error (MSE) to evaluate model accuracy on the training data.
+Save Predictions: Exports predictions to predictions.csv.
+
+How to Run the Code
+Place the train.csv and test.csv files in the specified directory.
+Update the dataset paths in the code if necessary.
+Run the script:
+bash
+Copy code
+python MainCode.py
+The script will display the preprocessed training data and save predictions to predictions.csv.
+Output
+Mean Squared Error (MSE): Provides an accuracy measure on the training data.
+Predictions CSV: A file named predictions.csv containing the predicted sale prices for the test data.
