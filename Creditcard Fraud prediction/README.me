@@ -1,0 +1,38 @@
+Credit Card Fraud Detection
+This project demonstrates how to build a simple credit card fraud detection system using a Random Forest classifier. It loads a dataset, explores the data, trains the model, makes predictions, evaluates the model's accuracy, and saves the predictions to a CSV file.
+
+Dataset
+The dataset used is a credit card transaction dataset with features representing transaction details and a target variable "Class" that indicates whether a transaction is fraudulent (1) or not (0).
+
+Requirements
+Python 3.x
+Pandas
+Scikit-learn
+You can install the necessary packages by running:
+
+bash
+Copy code
+pip install pandas scikit-learn
+
+Code Overview
+Load the Dataset: Reads the CSV file containing credit card transaction data.
+Data Exploration: Displays the first few rows and information about the dataset.
+Split the Data: Divides the data into features (X) and target variable (y), then further splits it into training and testing sets.
+Train the Model: Uses a Random Forest classifier to train on the training data.
+Make Predictions: Generates predictions on the testing data.
+Evaluate the Model: Prints the accuracy score and a classification report.
+Save Predictions: Exports the actual and predicted values to a CSV file.
+
+How to Run the Code
+Place the creditcard.csv dataset in the specified directory.
+Update the dataset path in the code if necessary.
+
+Run the script:
+bash
+Copy code
+python Maincode.py
+The accuracy and classification report will be displayed in the console, and the predictions will be saved to creditcard_predictions.csv.
+Output
+Accuracy Score: Indicates the percentage of correct predictions.
+Classification Report: Provides precision, recall, f1-score, and support for each class.
+Predictions CSV: A file named creditcard_predictions.csv containing actual and predicted classes for each transaction in the test set.
