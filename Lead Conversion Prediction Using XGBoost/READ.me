@@ -1,0 +1,49 @@
+Lead Conversion Prediction Using XGBoost
+This project predicts lead conversion status using an XGBoost classifier within a machine learning pipeline that handles data preprocessing. The code cleans the dataset, processes categorical and numerical data, trains a model, and outputs predictions to a CSV file.
+
+Dataset
+The dataset used is a lead conversion dataset containing lead details, and the target variable is cRMLeadStatusMasterName, which is mapped to binary classes representing conversion status.
+
+Requirements
+Python 3.x
+pandas
+scikit-learn
+xgboost
+joblib
+Install the required libraries with:
+
+bash
+Copy code
+pip install pandas scikit-learn xgboost joblib
+
+Code Overview
+Load the Dataset: Reads the augmented dataset augmented_data.csv.
+Data Preprocessing:
+Drops columns with all missing values.
+Fills missing values in the target column (cRMLeadStatusMasterName) with 0.
+Maps target labels to binary values (0 and 1) based on lead conversion status.
+Split Data: Divides data into training and testing sets.
+Preprocessing Pipeline:
+Scales numerical features.
+Encodes categorical features using one-hot encoding.
+Train the Model: Utilizes XGBoost Classifier within a pipeline to handle preprocessing and model training.
+Evaluate the Model: Measures model accuracy and generates a classification report on the test data.
+Save the Model: Exports the trained model to lead_status_prediction_model.pkl for future use.
+Save Predictions: Exports actual vs. predicted results on the test set to test_results.csv.
+
+How to Run the Code
+Place the augmented_data.csv file in the specified directory.
+Update the dataset path if necessary.
+
+Run the script:
+bash
+Copy code
+python Main.py
+The model will output accuracy and save predictions in test_results.csv.
+
+Output Files
+lead_status_prediction_model.pkl: The trained model for reuse.
+test_results.csv: CSV file with actual and predicted lead conversion statuses on the test set.
+Key Metrics
+Accuracy Score: Measures model accuracy on the test data.
+Classification Report: Shows precision, recall, and F1-score for each class.
