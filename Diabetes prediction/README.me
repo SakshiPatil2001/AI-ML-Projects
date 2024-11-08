@@ -1,0 +1,40 @@
+Diabetes Prediction Using XGBoost
+This project uses an XGBoost classifier to predict diabetes based on a dataset of medical diagnostic measurements. The code loads the data, trains a model, makes predictions, evaluates accuracy, and saves the predictions to a CSV file.
+
+Dataset
+The dataset used is a diabetes dataset where the target variable, Outcome, indicates if a patient has diabetes (1) or not (0).
+
+Requirements
+Python 3.x
+Pandas
+Scikit-learn
+XGBoost
+You can install the required libraries with:
+
+bash
+Copy code
+pip install pandas scikit-learn xgboost
+
+Code Overview
+Load the Dataset: Reads the diabetes.csv file, containing features like glucose levels, blood pressure, BMI, etc.
+Data Preprocessing: Splits the data into features (X) and target variable (Outcome).
+Split the Data: Divides the data into training and testing sets.
+Train the Model: Instantiates and trains an XGBoost classifier with 5000 boosting rounds.
+Make Predictions: Generates predictions on the testing set.
+Evaluate the Model: Prints accuracy and a classification report.
+Save Predictions: Exports actual and predicted values to predictions.csv.
+
+How to Run the Code
+Place the diabetes.csv file in the specified directory.
+Update the file path in the code if necessary.
+
+Run the script:
+bash
+Copy code
+python diabetes_prediction.py
+The script will display the accuracy, classification report, and the predictions saved in predictions.csv.
+
+Output
+Accuracy Score: Shows the percentage of correct predictions.
+Classification Report: Provides detailed metrics (precision, recall, f1-score) for each class.
+Predictions CSV: File predictions.csv containing actual and predicted values for the test set.
