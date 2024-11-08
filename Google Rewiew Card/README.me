@@ -1,0 +1,35 @@
+## Horizon Elevators Google Review Generator 
+
+## Project Overview
+This project automatically generates customer reviews for Horizon Elevators based on feedback provided in a CSV form. The generated reviews are designed to summarize customer experiences with Horizon Elevators' services, including installation, pricing, communication, and overall satisfaction. The reviews are generated using the T5 Transformer model.
+
+## Key Features
+- Utilizes T5 (Text-To-Text Transfer Transformer) to generate human-like review text.
+- Randomized review structure to create diverse outputs.
+- Reviews are based on customer input from various aspects such as pricing, responsiveness, and project type.
+  
+## Tools and Technologies
+- Python
+- Pandas for handling and processing CSV data.
+- Hugging Face Transformers (T5 model) for text generation.
+
+## How to Use
+1. **Data Input**: The input file should be a CSV containing customer feedback on Horizon Elevators' services.
+2. **Running the Script**: The script reads the CSV, processes the input, and uses the T5 model to generate a review based on the feedback.
+3. **Output**: The output is a new CSV file that contains the generated reviews in a separate column.
+
+## Installation
+1. Install the necessary libraries:
+    ```bash
+    pip install pandas transformers
+    ```
+2. Place the CSV file in the same directory as the script.
+
+3. Run the Python script to generate reviews.
+
+## Output
+The script generates a new CSV file with a column containing auto-generated reviews based on customer feedback.
+
+## Future Improvements
+- Enhance the T5 model to tailor reviews based on different types of elevator projects.
+- Add more customizable review generation templates.
