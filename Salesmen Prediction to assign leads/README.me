@@ -1,0 +1,54 @@
+Lead-to-Salesman Assignment Prediction Using XGBoost
+This project aims to predict and assign leads to specific salesmen based on a machine learning model. The model utilizes an XGBoost classifier and incorporates data preprocessing through a pipeline to handle categorical and numerical features.
+
+Project Overview
+The model is trained to predict which salesman should be assigned to each lead, based on historical lead and salesman data.
+
+Dataset
+leads_data.csv: Contains information on leads, including the Lead_ID and the assigned Salesman_ID.
+salesmen_data.csv: Contains data for each salesman, identified by Salesman_ID.
+Requirements
+Python 3.x
+pandas
+scikit-learn
+xgboost
+joblib
+Install the required libraries:
+
+bash
+Copy code
+pip install pandas scikit-learn xgboost joblib
+Code Walkthrough
+Load and Merge Data:
+
+The lead and salesman data are loaded and merged based on Assigned_Salesman_ID.
+The Assigned_Salesman_ID column is adjusted to ensure IDs start from 0 for proper encoding.
+Data Preprocessing:
+
+Separates numerical and categorical features.
+Applies standard scaling to numerical features and one-hot encoding to categorical features.
+Define and Train the Model:
+
+The XGBoost classifier (multi:softmax objective) is used, allowing for multiple classification categories based on the salesmen IDs.
+The model is trained using a pipeline to handle preprocessing and model fitting.
+Model Evaluation:
+
+Evaluates the model using accuracy and weighted F1-score.
+Generate and Save Predictions:
+
+The model predicts the assigned salesman for each lead in the test set.
+The assignments are saved to detailed_lead_salesman_assignments.csv for further use.
+How to Run the Code
+Place leads_data.csv and salesmen_data.csv in the specified directory.
+Update the file paths as necessary.
+
+Run the script:
+bash
+Copy code
+python FinalCode.py
+
+Output Files
+detailed_lead_salesman_assignments.csv: Contains predicted assignments, with Lead_ID and detailed information about each assigned salesman.
+Metrics
+Accuracy: Measures the correct lead-to-salesman assignments.
+F1-Score: Reflects model performance with imbalanced classes considered.
